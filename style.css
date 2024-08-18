@@ -1,0 +1,108 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Main container styling */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4f8;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Calculator container styling */
+.calc-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input field styling */
+.calc-container input {
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+/* Grid container for buttons */
+.grid-buttons {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Individual button styling */
+.grid-item {
+  padding: 20px;
+  background-color: #e9ecef;
+  color: #333;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+.grid-item:hover {
+  background-color: #dee2e6;
+  transform: translateY(-2px);
+}
+
+/* Special button colors */
+.grid-item:nth-child(1), /* AC button */
+.grid-item:nth-child(2) {
+  /* Del button */
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.grid-item:nth-child(4), /* Divide button */
+.grid-item:nth-child(8), /* Multiply button */
+.grid-item:nth-child(12), /* Subtract button */
+.grid-item:nth-child(16) {
+  /* Add button */
+  background-color: #339af0;
+  color: white;
+}
+
+.grid-item:nth-child(20) {
+  /* Equals button */
+  background-color: #51cf66;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .calc-container {
+    max-width: 100%;
+  }
+
+  .grid-item {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .calc-container input {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+}
